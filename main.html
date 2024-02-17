@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Builder</title>
+    <title>QR Code PDF Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>QR Code Builder</h1>
-        <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" placeholder="Enter first name...">
-        <br>
-        <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" placeholder="Enter last name...">
-        <br>
-        <button onclick="generateQR()">Generate QR Code</button>
-        <div id="qr-code"></div>
+        <h1>QR Code PDF Generator</h1>
+        <input type="file" id="file-input" accept=".csv">
+        <button id="preview-btn">Generate Preview</button>
+        <button id="save-pdf-btn" style="display: none;">Save PDF</button>
+        <div class="print-preview" id="print-preview"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+        <script src="script.js"></script>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
